@@ -4,7 +4,7 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        checkout scm
+        git 'https://www.github.com/nilu16/devops-tutorial.git'
     }
 
     stage('Build image') {
