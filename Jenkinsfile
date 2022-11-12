@@ -4,23 +4,22 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        checkout scm
+        git 'https://www.github.com/nilu16/devops-tutorial.git'
     }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-         /* app = docker.build("barora21/nodejs-helloworld")*/
-        echo "Building"
+        app = docker.build("nilu16/edureka")
     }
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
-         * This runs only a single dummy test inside the image. */
+         * For this example, we're using a Volkswagen-type approach ;-) */
 
         app.inside {
-            sh 'npm test'
+            sh 'echo "Tests passed"'
         }
     }
 
