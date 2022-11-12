@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("barora21:${env.BUILD_ID}")
+        app = docker.build("hello-node-app:${env.BUILD_ID}")
     }
 
     stage('Test image') {
