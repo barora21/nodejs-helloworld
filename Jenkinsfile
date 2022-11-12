@@ -4,14 +4,14 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        git 'https://www.github.com/nilu16/devops-tutorial.git'
+        git 'https://github.com/barora21/nodejs-helloworld.git'
     }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("nilu16/edureka")
+        app = docker.build("barora21:edureka")
     }
 
     stage('Test image') {
