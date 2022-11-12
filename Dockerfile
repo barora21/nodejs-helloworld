@@ -12,7 +12,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # copy our application inside the container
-COPY helloworld/* /app/
+COPY hello/* /app/
 
 # tell docker what port to expose
 EXPOSE 8000
