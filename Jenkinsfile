@@ -11,7 +11,8 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("barora21/nodejs-helloworld")
+         /* app = docker.build("barora21/nodejs-helloworld")*/
+        echo "Building"
     }
 
     stage('Test image') {
